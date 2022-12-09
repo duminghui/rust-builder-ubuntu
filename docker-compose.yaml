@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  rust-builder-ubuntu:
+    image: rust-builder-ubuntu
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rust-builder-ubuntu
+    hostname: rust-builder-ubuntu
+    tty: true
+    networks:
+      - default
+
+networks:
+  default:
