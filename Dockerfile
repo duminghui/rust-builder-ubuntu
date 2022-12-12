@@ -55,7 +55,7 @@ RUN set -eux; \
 
 # COPY config.toml /root/.cargo/config.toml
 # RUN set -eux; \
-#     cargo install sccache ; \
+#     cargo install sccache --no-default-features; \
 #     rm -rf /root/.cargo/registry
 
 COPY --chown=0755 sccache-0.3.3 /root/.cargo/bin/sccache
