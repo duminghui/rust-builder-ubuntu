@@ -12,13 +12,18 @@ services:
     networks:
       - default
 
-  rust-musl-builder:
-    image: rust-musl-builder
+  rust-linux-builder:
+    image: rust-linux-builder
     build:
       context: .
       dockerfile: Dockerfile-musl
-    container_name: rust-musl-builder
-    hostname: rust-musl-builder
+    container_name: rust-linux-builder
+    hostname: rust-linux-builder
+    volumes:
+      - .:/root/builder
+      - ~/.cargo/registry:/root/.cargo/registry
+      - ~/.cargo/git:/root/.cargo/git
+      - ~/.cache/sccache:/root/.cache/sccache
     tty: true
     networks:
       - default
