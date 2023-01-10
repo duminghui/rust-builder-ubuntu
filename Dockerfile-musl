@@ -15,11 +15,11 @@ RUN set -eux; \
 ENV RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 ENV RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
+COPY config-sccache.toml /root/.cargo/config
+
 COPY --chown=0755 sccache-0.3.3 /root/.cargo/bin/sccache
 ENV SCCACHE_DIR=/root/.cache/sccache
 ENV SCCACHE_CACHE_SIZE="3G"
-
-COPY config-sccache.toml /root/.cargo/config
 
 WORKDIR /home/rust/src
 
