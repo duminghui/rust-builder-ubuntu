@@ -16,6 +16,3 @@ git-fetch-with-cli = true
 
 [http]
 multiplexing = false
-
-# [build]
-# rustc-wrapper = "sccache"
