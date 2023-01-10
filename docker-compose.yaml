@@ -23,7 +23,7 @@ services:
       - .:/root/builder
       - ~/.cargo/registry:/root/.cargo/registry
       - ~/.cargo/git:/root/.cargo/git
-      - ~/.cache/sccache:/root/.cache/sccache
+      - ~/.cache/sccache-ubuntu:/root/.cache/sccache
     tty: true
     networks:
       - default
