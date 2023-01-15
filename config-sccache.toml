@@ -19,6 +19,7 @@ multiplexing = false
 
 [build]
 rustc-wrapper = "sccache"
+# target-dir = "target-linux" #put it into $PROJECT_DIR/.cargo/config.toml
 
 [target.x86_64-unknown-linux-musl]
 linker = "x86_64-unknown-linux-musl-gcc"
